@@ -1,7 +1,4 @@
 import React, { FC, HTMLAttributes, ReactChild } from 'react';
-import {CenteredRow} from "@src/layouts/CenteredRow";
-import {GreenButton} from "@src/controls/GreenButton";
-
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   /** custom content, defaults to 'the snozzberries taste like snozzberries' */
   children?: ReactChild;
@@ -15,21 +12,3 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 export const Thing: FC<Props> = ({ children }) => {
   return <div>{children || `the snozzberries taste like snozzberries`}</div>;
 };
-
-export const CenteredButtonRow: FC<Props> = ({ children }) => {
-  return (<CenteredRow>
-      <GreenButton>
-          {children}
-      </GreenButton>
-  </CenteredRow>);
-};
-
-/*export const CenteredButtonRow: FC<Props> = ({ children }) => {
-  return (
-      <CenteredRow>
-        <GreenButton>
-          {children}
-        </GreenButton>
-      </CenteredRow>
-  );
-}*/
